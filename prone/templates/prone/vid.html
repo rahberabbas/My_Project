@@ -1,0 +1,37 @@
+{% extends 'prone/basic.html' %}
+{% load static %}
+{% block css %}
+video{
+  margin-left: 20%;
+  margin-top: 40px;
+}
+h1,h2{
+  margin-left:20%;
+  margin-top:10px;
+  color:white;
+}
+p{
+  margin-left:20%;
+  margin-top:10px;
+  color:white;
+  padding-left:13%;
+}
+body{
+
+  background-color:rgb(53,54,59);
+}
+
+{% endblock %}
+{% load static %}
+{% block body %}
+
+<h1 class="mt-4"><strong><u>{{vido.name}}</u></strong></h1>
+  <video width="880" height="496" controls>
+    <source src="/media/{{vido.vide}}" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+  </video>
+  <br>
+  <h2>Description:- </h2>
+  <p>{{ vido.desc}}</p>
+{% endblock %}
